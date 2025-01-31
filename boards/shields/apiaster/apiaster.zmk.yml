@@ -1,0 +1,14 @@
+file_format: "1"
+id: apiaster
+name: Apiaster
+type: shield
+url: https://github.com/Nick-Munnich/apiaster
+requires: [seeed_xiao]
+features:
+  - keys
+  - studio
+siblings:
+  - apiaster_wired
+  - apiaster_left
+  - apiaster_right
+  - apiaster_dongle

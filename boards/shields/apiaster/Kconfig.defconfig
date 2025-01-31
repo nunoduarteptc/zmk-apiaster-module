@@ -1,0 +1,23 @@
+if SHIELD_APIASTER_WIRED
+
+config ZMK_KEYBOARD_NAME
+    default "Apiaster"
+
+endif
+
+if SHIELD_APIASTER_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Apiaster"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_APIASTER_LEFT || SHIELD_APIASTER_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

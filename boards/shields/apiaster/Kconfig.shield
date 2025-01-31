@@ -1,0 +1,8 @@
+config SHIELD_APIASTER_WIRED
+    def_bool $(shields_list_contains,apiaster_wired)
+
+config SHIELD_APIASTER_LEFT
+    def_bool $(shields_list_contains,apiaster_left)
+
+config SHIELD_APIASTER_RIGHT
+    def_bool $(shields_list_contains,apiaster_right)

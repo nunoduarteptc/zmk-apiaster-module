@@ -1,0 +1,12 @@
+#include "apiaster.dtsi" // The shared dtsi file is included in the overlay
+
+// Label of the kscan node in the dtsi
+&kscan0 {
+    compatible = "zmk,kscan-mock";
+    columns = <0>;
+    rows = <0>;
+    events = <0>;
+    /delete-property/ wakeup-source;
+    /delete-property/ gpios;
+    /delete-property/ interrupt-gpios;
+};
