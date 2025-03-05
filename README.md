@@ -92,7 +92,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-apiaster-module
-      remote: Nick-Munnich
+      remote: munnich
       revision: main
       import: config/west.yml
   self:
