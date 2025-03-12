@@ -85,7 +85,7 @@ manifest:
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
     - name: munnich
-      url-base: https://github.com/Nick-Munnich
+      url-base: https://github.com/nmunnich
   projects:
     - name: zmk
       remote: zmkfirmware
