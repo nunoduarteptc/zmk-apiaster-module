@@ -8,7 +8,7 @@ Firmware using the XIAO nRF52840 makes use of the awesome [RGBLED widget module]
 
 # Getting Your Firmware
 
-**Do not fork this repository**. You have two options: You can download the firmware from this repository directly, or you can use a ZMK config repository to customise the keymap and other settings before downloading. Firmware from this repository optionally has [ZMK Studio](https://zmk.dev/docs/features/studio) enabled for basic keymap customisation.
+**Do not fork this repository**. You have two options: You can download the firmware from this repository directly, or you can use a ZMK config repository to customise the keymap and other settings before downloading. Firmware from this repository optionally has [ZMK Studio](https://zmk.dev/docs/features/studio) enabled for basic keymap customisation. The Studio Unlock behavior is bound to the `G` key on the `raise` layer (see [default keymap](#default-keymap))
 
 ## GitHub Actions Download
 
