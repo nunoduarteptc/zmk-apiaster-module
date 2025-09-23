@@ -61,8 +61,8 @@
             bindings = <
           &kp N1     &kp N2     &kp N3      &kp N4      &kp N5                      &kp N6    &kp N7      &kp N8      &kp N9     &kp N0
           &kp Q      &kp W      &kp E       &kp R       &kp T                       &kp Y     &kp U       &kp I       &kp O      &kp P
-&kp TAB   &hl LALT A &hl LGUI S &hl LSHFT D &hl LCTRL F &kp G                       &kp H     &hr RCTRL J &hr RSHFT K &hr RGUI L &hr RALT SEMI &kp ENTER
-&kp BSLH &kp Z      &kp X      &kp C       &kp V       &kp B                       &kp N     &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp SQT
+          &kp TAB   &hl LALT A &hl LGUI S &hl LSHFT D &hl LCTRL F &kp G                       &kp H     &hr RCTRL J &hr RSHFT K &hr RGUI L &hr RALT SEMI &kp ENTER
+          &kp BSLH &kp Z      &kp X      &kp C       &kp V       &kp B                       &kp N     &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp SQT
                                             &mo LOWER   &kp SPACE &kp ESC &kp DEL &kp BSPC &mo RAISE
             >;
         };
@@ -90,13 +90,13 @@
 //         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                |  BT 0 | BT 1 |  BT 2 | BT 3 | BT 4     | 
 //         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | BT CLEAR |       
 // | reset | CAPS | INS    | PRNTSCR | MENU        | studio |                | PGDN  |   <- |   v   |  ->  |  off     | reset |
-// |       |      |        | QWERTY  | WASD        |  boot  |                | boot  |      |       |      |  POWER   | reset |
+// |       |      |        |         |             |  boot  |                | boot  |      |       |      |  POWER   | reset |
 //                                   |             |        |      |  |      |       |      |
             bindings = <
           &kp C_MUTE &kp C_VOL_UP &kp C_VOL_DN &kp C_BRI_UP &kp  C_BRI_DN                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                 
           &kp C_PREV &kp C_RW     &kp C_PP     &kp C_FF     &kp C_NEXT                   &kp PG_UP    &kp HOME     &kp UP       &kp END      &bt BT_CLR
 &sys_reset &kp CLCK   &kp INS      &kp PSCRN    &kp K_CMENU  &studio_unlock               &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT    &soft_off   &sys_reset
-&trans    &trans     &trans       &tog QWERTY  &to WASD     &bootloader                  &bootloader  &trans       &trans       &trans       &kp C_PWR   &trans
+&trans    &trans     &trans       &trans   &trans     &bootloader                  &bootloader  &trans       &trans       &trans       &kp C_PWR   &trans
                                                &trans       &trans         &trans &trans &trans       &trans 
             >;
         };
