@@ -4,8 +4,6 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: munnich
       url-base: https://github.com/nmunnich
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -14,6 +12,5 @@ manifest:
     - name: zmk-component-rp2040-zero
       remote: munnich
       revision: main
-      import: config/west.yml
   self:
     path: config
