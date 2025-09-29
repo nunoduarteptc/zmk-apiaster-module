@@ -102,10 +102,10 @@
 // |       |      |        |         |             |soft_off|                | reset |      |       |  ./: |  Ç   |       |
 //                                   |             |        |      |  |      |       |      |
             bindings = <
-          &kp C_MUTE &kp C_VOL_UP &kp C_VOL_DN &kp C_BRI_UP &kp  C_BRI_DN                &bt bootloader &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                 
+          &kp C_MUTE &kp C_VOL_UP &kp C_VOL_DN &kp C_BRI_UP &kp C_BRI_DN                 &bootloader  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                 
           &kp C_PREV &kp C_RW     &kp C_PP     &kp C_FF     &kp C_NEXT                   &kp PG_UP    &kp HOME     &kp UP       &kp END      &kp PT_SQT
-&trans    &kp CLCK   &kp INS      &kp PSCRN    &kp K_CMENU  &studio_unlock               &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT    &PT_PLUS    &trans
-&trans    &trans     &trans       &trans       &trans       &soft_off                    &reset       &trans       &trans       &kp PT_DOT   &PT_C_CEDILLA           &trans
+&trans    &kp CLCK   &kp INS      &kp PSCRN    &kp K_CMENU  &studio_unlock               &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT    &PT_PLUS      &trans
+&trans    &trans     &trans       &trans       &trans       &soft_off                    &reset       &trans       &trans       &kp PT_DOT   &PT_C_CEDILLA &trans
                                                &trans       &trans      &trans &trans    &trans       &trans 
             >;
         };
