@@ -65,13 +65,13 @@
 //              |   1/!   |   2/" |    3/#  |   4/$  |   5/% |                |  6/&  |   7//  |   8/(   |   9/) |   0/= |       
 //              |   Q     |   W   |    E    |   R    |   T   |                |  Y    |     U  |    I    |   O   |   P   |        
 // |  LSHIFT/TAB| ALT/A   | GUI/S | SHIFT/D | CTRL/F |   G   |                |  H    | CTRL/J | SHIFT/K | GUI/L | ./:   | ENTER |
-// |  CTRL      |   LT/GT |   Z   |    X    |   C    |   V   |                |  B    |   N    |    M    |   ,/; | -/_   | SHIFT |
+// |  CTRL      |  LT     |   Z   |    X    |   C    |   V   |                 |  B    |   N    |    M    |   ,/; | -/_   | SHIFT |
 //                                          |  LALT  | SPACE | LOWER || DEL   |BACK   | RAISE  | 
             bindings = <
-               &kp PT_N1   &kp PT_N2   &kp PT_N3   &kp PT_N4      &kp PT_N5                      &kp PT_N6    &kp PT_N7   &kp PT_N8  &kp PT_N9  &kp PT_N0
-               &kp Q       &kp W       &kp PT_E    &kp R       &kp T                             &kp Y        &kp U       &kp I       &kp O          &kp P
-&hl LSHIFT TAB &hl LALT A  &hl LGUI S  &hl LSHFT D &hl LCTRL F &kp G                             &kp H        &hr RCTRL J &hr RSHFT K &hr RGUI L     &kp PT_PERIOD  &kp ENTER
-&kp LCTRL      &kp PT_LT   &kp Z       &kp X       &kp C       &kp V                             &kp B        &kp N       &kp M       &kp PT_COMMA   &kp PT_MINUS   &kp RSHFT
+               &kp PT_N1        &kp PT_N2   &kp PT_N3   &kp PT_N4      &kp PT_N5                      &kp PT_N6    &kp PT_N7   &kp PT_N8  &kp PT_N9  &kp PT_N0
+               &kp Q            &kp W       &kp PT_E    &kp R       &kp T                             &kp Y        &kp U       &kp I       &kp O          &kp P
+&hl LSHIFT TAB &hl LALT A       &hl LGUI S  &hl LSHFT D &hl LCTRL F &kp G                             &kp H        &hr RCTRL J &hr RSHFT K &hr RGUI L     &kp RPAR  &kp ENTER
+&kp LCTRL      &kp PT_LESS_THAN &kp Z       &kp X       &kp C       &kp V                             &kp B        &kp N       &kp M       &kp PT_COMMA   &kp PT_MINUS   &kp RSHFT
                                             &kp LALT    &kp SPACE   &mo LOWER       &kp DEL &kp BSPC &mo RAISE
             >;
         };
@@ -79,11 +79,11 @@
         lower_layer {
             display-name = "lower";
 // ------------------------------------------------------------------------------------------------------------
-// |       |  F1 |  F3 |  F4 |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |       |
-// |       |PIPE |     |  €   |     |      |                   |      |       |       |      |       |       |
+// |       |  F1 |  F3 |  F4 |  F4  |  F5  |                    |  F6  |  F7   |  F8   |  F9  |  F10  |       |
+// |       |PIPE |     |  €   |     |      |                    |      |       |       |      |       |       |
 // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |  F11  |
 // |       |  LT |  -  |  +   |  {   |  }   |                   |  [   |  ]    |  ;    |  :   |   \   |  F12  |
-//               |     |      |      |      |        |  |       |      |       |       |      |
+//                            |      |      |        |  |       |      |       |             
             bindings = <
          &kp F1          &kp F2      &kp F3         &kp F4         &kp F5                   &kp F6    &kp F7         &kp F8          &kp F9        &kp F10   
          &kp PT_PIPE     &kp N2      &kp RA(PT_E)   &kp N4         &kp N5                   &kp N6    &kp N7         &kp N8          &kp N9        &kp N0    
@@ -96,16 +96,16 @@
         raise_layer {
             display-name = "raise";
 // ------------------------------------------------------------------------------------------------------------
-//         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                | boot | BT 1 |  BT 2 | BT 3 | BT 4 | 
-//         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | '/? |       
-// |       | CAPS | INS    | PRNTSCR | SUPER       | studio |                | PGDN  |   <- |   v   |  ->  |   +/  |       |
+//         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                | boot  | BT 1 |  BT 2 | BT 3 | BT 4 | 
+//         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | '/?  |       
+// |       | CAPS | INS    | PRNTSCR | SUPER       | studio |                | PGDN  |   <- |   v   |  ->  |   +/ |       |
 // |       |      |        |         |             |soft_off|                | reset |      |       |  ./: |  Ç   |       |
 //                                   |             |        |      |  |      |       |      |
             bindings = <
           &kp C_MUTE &kp C_VOL_UP &kp C_VOL_DN &kp C_BRI_UP &kp C_BRI_DN                 &bootloader  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                 
           &kp C_PREV &kp C_RW     &kp C_PP     &kp C_FF     &kp C_NEXT                   &kp PG_UP    &kp HOME     &kp UP       &kp END      &kp PT_SQT
 &trans    &kp CLCK   &kp INS      &kp PSCRN    &kp LGUI     &studio_unlock               &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT    &kp PT_PLUS       &trans
-&trans    &trans     &trans       &trans       &trans       &soft_off                    &sys_reset       &trans       &trans       &kp PT_DOT   &kp PT_C_CEDILLA  &trans
+&trans    &trans     &trans       &trans       &trans       &soft_off                    &sys_reset   &trans       &trans       &kp PT_DOT   &kp PT_C_CEDILLA  &trans
                                                &trans       &trans      &trans &trans    &trans       &trans 
             >;
         };
