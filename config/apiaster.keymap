@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define QWERTY 0
-#define RAISE2 1
+#define TOP 1
 // #define LOWER 2
 // #define RAISE 3
 
@@ -67,18 +67,18 @@
 //              |   Q     |   W   |    E    |   R    |   T   |                |  Y    |     U  |    I    |   O   |   P   |        
 // |  LSHIFT/TAB| ALT/A   | GUI/S | SHIFT/D | CTRL/F |   G   |                |  H    | CTRL/J | SHIFT/K | GUI/L | ./:   | ENTER |
 // |  CTRL      |  LT     |   Z   |    X    |   C    |   V   |                 |  B    |   N    |    M    |   ,/; | -/_   | SHIFT |
-//                                          |  LALT  | SPACE | RAISE2 || DEL   |BACK   | RAISE2  | 
+//                                          |  LALT  | SPACE | TOP || DEL   |BACK   | TOP  | 
             bindings = <
                &kp PT_N1        &kp PT_N2   &kp PT_N3   &kp PT_N4      &kp PT_N5                      &kp PT_N6    &kp PT_N7   &kp PT_N8  &kp PT_N9  &kp PT_N0
                &kp Q            &kp W       &kp PT_E    &kp R       &kp T                             &kp Y        &kp U       &kp I       &kp O          &kp P
 &mt LSHIFT TAB &hl LALT A       &hl LGUI S  &hl LSHFT D &hl LCTRL F &kp G                             &kp H        &hr RCTRL J &hr RSHFT K &hr RGUI L     &kp RPAR  &kp ENTER
 &kp LCTRL      &kp PT_LESS_THAN &kp Z       &kp X       &kp C       &kp V                             &kp B        &kp N       &kp M       &kp PT_COMMA   &kp PT_MINUS   &kp RSHFT
-                                            &kp LALT    &kp SPACE   &mo RAISE2       &kp DEL &kp BSPC &mo RAISE2
+                                            &kp LALT    &kp SPACE   &mo TOP       &kp DEL &kp BSPC &mo TOP
             >;
         };
 
-        raise2_layer {
-            display-name = "raise2";
+        top_layer {
+            display-name = "top";
 // ------------------------------------------------------------------------------------------------------------
 //         |  F1  |  F3    |  F4     |  F4     |  F5    |                |  F6   |  F7  |  F8   |  F9  |  F10 |       
 //         | PIPE |   @    | PAUSE   | PREV    |  NEXT  |                | PGUP  | HOME |   ^   | END  | '/?  |       
