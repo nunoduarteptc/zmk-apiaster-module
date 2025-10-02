@@ -46,38 +46,37 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <10 11>;
-            bindings = <&kp ESC>;
-        };
-
-        combo_LT_RSHIFT {
-            timeout-ms = <100>;
-            key-positions = <34 44>;
-            bindings = <&kp GT>;
-        };
-
-        combo_LT_LSHIFT {
-            timeout-ms = <75>;
-            key-positions = <33 34>;
-            bindings = <&kp GT>;
-        };
-
-        combo_PLUS_RSHIFT {
-            timeout-ms = <75>;
-            key-positions = <33 34>;
-            bindings = <&kp PT_ASTERISK>;
-        };
-
-        combo_PLUS_LSHIFT {
-            timeout-ms = <75>;
-            key-positions = <33 34>;
-            bindings = <&kp PT_ASTERISK>;
-        };
-    };
+//    combos {
+//        compatible = "zmk,combos";
+//        combo_esc {
+//            timeout-ms = <50>;
+//            key-positions = <10 11>;
+//           bindings = <&kp ESC>;
+//        };
+//
+//        combo_LT_RSHIFT {
+//            timeout-ms = <100>;
+//            key-positions = <34 44>;
+//            bindings = <&kp GT>;
+//        };
+//
+//        combo_LT_LSHIFT {
+//            timeout-ms = <75>;
+//            key-positions = <33 34>;
+//            bindings = <&kp GT>;
+//        };
+//        combo_PLUS_RSHIFT {
+//            timeout-ms = <75>;
+//            key-positions = <33 34>;
+//              bindings = <&kp PT_ASTERISK>;
+//        };
+//
+//        combo_PLUS_LSHIFT {
+//            timeout-ms = <75>;
+//            key-positions = <33 34>;
+//            bindings = <&kp PT_ASTERISK>;
+//        };
+//    };
 
     keymap {
         compatible = "zmk,keymap";
