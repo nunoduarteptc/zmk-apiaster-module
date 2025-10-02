@@ -16,7 +16,7 @@
     behaviors {
         hl: home_row_hold_tap_left {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <1>;
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;                // repeat on tap-into-hold
@@ -28,7 +28,7 @@
 
         hr: home_row_hold_tap_right {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <1>;
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;                // repeat on tap-into-hold
