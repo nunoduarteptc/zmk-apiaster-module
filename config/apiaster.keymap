@@ -71,7 +71,7 @@
             bindings = <
                &kp PT_N1        &kp PT_N2   &kp PT_N3   &kp PT_N4      &kp PT_N5                      &kp PT_N6    &kp PT_N7   &kp PT_N8  &kp PT_N9  &kp PT_N0
                &kp Q            &kp W       &kp PT_E    &kp R       &kp T                             &kp Y        &kp U       &kp I       &kp O          &kp P
-&mt LSHIFT TAB &hl LALT A       &kp S       &hl LSHFT D &hl LCTRL F &hl LGUI G                        &kp H        &hr RCTRL J &hr RSHFT K &hr RGUI L     &kp PT_PLUS  &kp ENTER
+&mt LSHIFT TAB &hl LALT A       &hl LSHFT S &kp D       &hl LCTRL F &hl LGUI G                        &kp H        &hr RCTRL J &hr RSHFT K &hr RGUI L     &kp PT_PLUS  &kp ENTER
 &kp LCTRL      &kp PT_LESS_THAN &kp Z       &kp X       &kp C       &kp V                             &kp B        &kp N       &kp M       &kp PT_COMMA   &kp PT_MINUS   &kp RSHFT
                                                         &kp LALT    &kp SPACE   &mo TOP    &mo TOP    &kp BSPC     &kp RALT
             >;
@@ -81,7 +81,7 @@
             display-name = "top";
 // ------------------------------------------------------------------------------------------------------------
 //         |  F1     |  F3    |  F4     |  F4     |  F5    |                |  F6    |  F7  |  F8   |  F9  |  F10 |       
-//         | PT_BSLH |   @    |  VOL+   | VOL-    |  NEXT  |                | reset  |      |       |      | '/?  |       
+//         | PT_BSLH |   @    |  VOL+   | VOL-    |  NEXT  |                | reset  |  DEL |       |      | '/?  |       
 // |       | CAPS    | INS    | PRNTSCR | SUPER   | studio |                | PGUP   | HOME |   ^   |  END |   +/ |   F12 |
 // |       | PT_GT   |soft_off|         |         |  MUTE  |                | PGDN   |   <- |   v   |  ->  |  Ç   |       |
 //                                      |         |        |      |  |      |        |      | 
@@ -89,7 +89,7 @@
           &kp F1       &kp F2       &kp F3       &kp F4        &kp F5                   &kp F6       &kp F7       &kp F8       &kp F9      &kp F10   
           &kp PT_BSLH  &kp RA(PT_E) &kp C_VOL_UP &kp C_VOL_DN  &kp C_NEXT               &sys_reset   &kp DEL      &trans       &trans      &kp PT_SQT
 &trans    &kp CLCK     &kp INS      &kp PSCRN    &kp LGUI      &studio_unlock           &kp PG_UP    &kp HOME     &kp UP       &kp END     &kp PT_DOT        &kp F12
-&trans    &kp PT_GT    &soft_off   &trans        &trans        &C_MUTE                  &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT   &kp PT_C_CEDILLA  &trans
+&trans    &kp PT_GT    &soft_off    &trans       &trans        &kp C_MUTE               &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT   &kp PT_C_CEDILLA  &trans
                                                  &trans        &trans    &trans &trans  &trans       &trans 
             >;
         };
@@ -117,7 +117,7 @@
 //         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                | boot  | BT 1 |  BT 2 | BT 3 | BT 4 | 
 //         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | '/?  |       
 // |       | CAPS | INS    | PRNTSCR | SUPER       | studio |                | PGDN  |   <- |   v   |  ->  |   +/ |       |
-// |       |      |        |         |  PREV           |soft_off|            | reset |      |       |  ./: |  Ç   |       |
+// |       |      |        |         |  PREV       |soft_off|            | reset |      |       |  ./: |  Ç   |       |
 //                                   |             |        |      |  |      |       |      |
 //            bindings = <
 //          &kp C_MUTE &kp C_VOL_UP &kp C_VOL_DN &kp C_BRI_UP &kp C_BRI_DN                 &bootloader  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                 
