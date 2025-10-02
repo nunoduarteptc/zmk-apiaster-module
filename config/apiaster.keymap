@@ -77,12 +77,6 @@
             key-positions = <33 34>;
             bindings = <&kp PT_ASTERISK>;
         };
-
-        combo_PLUS_LSHIFT {
-            timeout-ms = <75>;
-            key-positions = <33 34>;
-            bindings = <&kp PT_ASTERISK>;
-        };
     };
 
     keymap {
