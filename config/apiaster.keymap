@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define QWERTY 0
-#define TOP 1
+#define RAISE 1
 
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34 35 36 37
 #define KEYS_R 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 38 39 40 41 42 43
@@ -88,18 +88,18 @@
 //              |   Q     |   W   |    E    |   R    |   T   |                |  Y    |     U  |    I    |   O   |   P   |        
 // |  LSHIFT/TAB| ALT/A   |   S   | SHIFT/D | CTRL/F |LGUI/G |                |  H    | CTRL/J | SHIFT/K | GUI/L |  +/*  | ENTER |
 // |  CTRL      |  LT     |   Z   |    X    |   C    |   V   |                |  B    |   N    |    M    |   ,/; | -/_   | SHIFT |
-//                                          |  LALT  | SPACE |  TOP  ||  TOP  |BACK   | RALT   | 
+//                                          |  LALT  | SPACE | RAISE || RAISE |BACK   | RALT   | 
             bindings = <
                &kp PT_N1        &kp PT_N2   &kp PT_N3   &kp PT_N4      &kp PT_N5                      &kp PT_N6    &kp PT_N7   &kp PT_N8  &kp PT_N9  &kp PT_N0
                &kp Q            &kp W       &kp PT_E    &kp R       &kp T                             &kp Y        &kp U       &kp I       &kp O          &kp P
 &mt LSHIFT TAB &hl LALT A       &hl LSHFT S &kp D       &hl LCTRL F &hl LGUI G                        &kp H        &hr RCTRL J &hr RSHFT K &hr RGUI L     &kp PT_PLUS  &kp ENTER
 &kp LCTRL      &kp LT           &kp Z       &kp X       &kp C       &kp V                             &kp B        &kp N       &kp M       &kp PT_COMMA   &kp PT_MINUS  &kp RSHFT
-                                                        &kp LALT    &kp SPACE   &mo TOP    &mo TOP    &kp BSPC     &kp RALT
+                                                        &kp LALT    &kp SPACE   &mo RAISE    &mo RAISE    &kp BSPC     &kp RALT
             >;
         };
 
-        top_layer {
-            display-name = "top";
+        raise_layer {
+            display-name = "raise";
 // ------------------------------------------------------------------------------------------------------------
 //         |  F1     |  F3    |  F4     |  F4     |  F5    |                |  F6    |  F7  |  F8   |  F9  |  F10 |       
 //         | PT_BSLH |   @    |  VOL+   | VOL-    |  NEXT  |                | reset  |  DEL |       |      | '/?  |       
@@ -118,5 +118,6 @@
         extra1 {
             status = "reserved";
         };
+    };
     };
 };
