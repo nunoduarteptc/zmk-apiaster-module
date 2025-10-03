@@ -62,7 +62,7 @@
                &kp PT_N1        &kp PT_N2   &kp PT_N3   &kp PT_N4      &kp PT_N5                      &kp PT_N6    &kp PT_N7   &kp PT_N8  &kp PT_N9  &kp PT_N0
                &kp Q            &kp W       &kp PT_E    &kp R       &kp T                             &kp Y        &kp U       &kp I       &kp O          &kp P
 &mt LSHIFT TAB &hl LALT A       &hl LSHFT S &kp D       &hl LCTRL F &hl LGUI G                        &kp H        &hr RCTRL J &hr RSHFT K &hr RGUI L     &kp PT_PLUS  &kp ENTER
-&kp LCTRL      &kp PT_LT           &kp Z       &kp X       &kp C       &kp V                             &kp B        &kp N       &kp M       &kp PT_COMMA   &kp PT_MINUS &kp RSHFT
+&kp LCTRL      &kp PT_LT        &kp Z       &kp X       &kp C       &kp V                             &kp B        &kp N       &kp M       &kp PT_COMMA   &kp PT_MINUS &kp RSHFT
                                                         &kp LALT    &kp SPACE   &mo RAISE  &mo RAISE    &kp BSPC  &kp RALT
             >;
         };
