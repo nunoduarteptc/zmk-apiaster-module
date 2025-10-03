@@ -12,7 +12,6 @@
 #define THUMBS_R 47 48 49
 
 / {    
-
     behaviors {
         hl: home_row_hold_tap_left {
             compatible = "zmk,behavior-hold-tap";
@@ -37,46 +36,16 @@
             hold-trigger-key-positions = <KEYS_L THUMBS_L>;
             hold-trigger-on-release;             // delay positional check until key-release
         };
-
-//        td_rst: reset_tap_dance {
-//            compatible = "zmk,behavior-tap-dance";
-//            #binding-cells = <0>;
-//            tapping-term-ms = <200>;
-//            bindings = <&sys_reset>, <&bootloader>;
-//        };
     };
 
-//    combos {
-//        compatible = "zmk,combos";
-//        combo_esc {
-//            timeout-ms = <50>;
-//            key-positions = <10 11>;
-//           bindings = <&kp ESC>;
-//        };
-//
-//        combo_LT_RSHIFT {
-//            timeout-ms = <100>;
-//            key-positions = <34 44>;
-//            bindings = <&kp GT>;
-//        };
-//
-//        combo_LT_LSHIFT {
-//            timeout-ms = <75>;
-//            key-positions = <33 34>;
-//            bindings = <&kp GT>;
-//        };
-//        combo_PLUS_RSHIFT {
-//            timeout-ms = <75>;
-//            key-positions = <33 34>;
-//              bindings = <&kp PT_ASTERISK>;
-//        };
-//
-//        combo_PLUS_LSHIFT {
-//            timeout-ms = <75>;
-//            key-positions = <33 34>;
-//            bindings = <&kp PT_ASTERISK>;
-//        };
-//    };
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <10 11>;
+            bindings = <&kp ESC>;
+        };  
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -93,8 +62,8 @@
                &kp PT_N1        &kp PT_N2   &kp PT_N3   &kp PT_N4      &kp PT_N5                      &kp PT_N6    &kp PT_N7   &kp PT_N8  &kp PT_N9  &kp PT_N0
                &kp Q            &kp W       &kp PT_E    &kp R       &kp T                             &kp Y        &kp U       &kp I       &kp O          &kp P
 &mt LSHIFT TAB &hl LALT A       &hl LSHFT S &kp D       &hl LCTRL F &hl LGUI G                        &kp H        &hr RCTRL J &hr RSHFT K &hr RGUI L     &kp PT_PLUS  &kp ENTER
-&kp LCTRL      &kp LT           &kp Z       &kp X       &kp C       &kp V                             &kp B        &kp N       &kp M       &kp PT_COMMA   &kp PT_MINUS  &kp RSHFT
-                                                        &kp LALT    &kp SPACE   &mo RAISE  &mo RALT    &kp BSPC  &mo RAISE
+&kp LCTRL      &kp PT_LT           &kp Z       &kp X       &kp C       &kp V                             &kp B        &kp N       &kp M       &kp PT_COMMA   &kp PT_MINUS &kp RSHFT
+                                                        &kp LALT    &kp SPACE   &mo RAISE  &mo RAISE    &kp BSPC  &kp RALT
             >;
         };
 
@@ -104,18 +73,34 @@
 //         |  F1     |  F3    |  F4     |  F4     |  F5    |                |  F6    |  F7  |  F8   |  F9  |  F12 |       
 //         | PT_BSLH |   @    |  VOL+   | VOL-    |  NEXT  |                | reset  |  DEL |       |      | '/?  |       
 // |       | CAPS    | INS    | PRNTSCR | SUPER   | studio |                | PGUP   | HOME |   ^   |  END |   +/ |       |
-// |       | PT_GT   |soft_off|         |         |  MUTE  |                | PGDN   |   <- |   v   |  ->  |  Ç   |       |
+// |       | PT_GT   |  MUTE  |         |         |        |                | PGDN   |   <- |   v   |  ->  |  Ç   |       |
 //                                      |         |        |      |  |      |        |      | 
             bindings = <
           &kp F1       &kp F2       &kp F3       &kp F4        &kp F5                   &kp F6       &kp F7       &kp F8       &kp F9       &kp F12
           &kp PT_BSLH  &kp RA(PT_E) &kp C_VOL_UP &kp C_VOL_DN  &kp C_NEXT               &sys_reset   &kp DEL      &trans       &kp PT_SQT   &kp PT_ACUTE
 &trans    &kp CLCK     &kp INS      &kp PSCRN    &kp LGUI      &bootloader              &kp PG_UP    &kp HOME     &kp UP       &kp END      &kp PT_DOT       &trans
-&trans    &kp PT_GT    &soft_off    &trans       &trans        &kp C_MUTE               &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT    &kp PT_C_CEDILLA &trans
+&trans    &kp PT_GT    &kp C_MUTE    &trans       &trans       &trans                   &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT    &kp PT_C_CEDILLA &trans
                                                  &trans        &trans    &trans &trans  &trans       &trans 
             >;
         };
 
         extra1 {
+            status = "reserved";
+        };
+
+        extra2 {
+            status = "reserved";
+        };
+
+        extra3 {
+            status = "reserved";
+        };
+
+        extra4 {
+            status = "reserved";
+        };
+
+        extra5 {
             status = "reserved";
         };
     };
