@@ -38,12 +38,12 @@
             hold-trigger-on-release;             // delay positional check until key-release
         };
 
-        td_rst: reset_tap_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sys_reset>, <&bootloader>;
-        };
+//        td_rst: reset_tap_dance {
+//            compatible = "zmk,behavior-tap-dance";
+//            #binding-cells = <0>;
+//            tapping-term-ms = <200>;
+//            bindings = <&sys_reset>, <&bootloader>;
+//        };
     };
 
 //    combos {
@@ -88,28 +88,28 @@
 //              |   Q     |   W   |    E    |   R    |   T   |                |  Y    |     U  |    I    |   O   |   P   |        
 // |  LSHIFT/TAB| ALT/A   |   S   | SHIFT/D | CTRL/F |LGUI/G |                |  H    | CTRL/J | SHIFT/K | GUI/L |  +/*  | ENTER |
 // |  CTRL      |  LT     |   Z   |    X    |   C    |   V   |                |  B    |   N    |    M    |   ,/; | -/_   | SHIFT |
-//                                          |  LALT  | SPACE | RAISE || RAISE |BACK   | RALT   | 
+//                                          |  LALT  | SPACE | RAISE || RAISE | BACK  | RALT  |
             bindings = <
                &kp PT_N1        &kp PT_N2   &kp PT_N3   &kp PT_N4      &kp PT_N5                      &kp PT_N6    &kp PT_N7   &kp PT_N8  &kp PT_N9  &kp PT_N0
                &kp Q            &kp W       &kp PT_E    &kp R       &kp T                             &kp Y        &kp U       &kp I       &kp O          &kp P
 &mt LSHIFT TAB &hl LALT A       &hl LSHFT S &kp D       &hl LCTRL F &hl LGUI G                        &kp H        &hr RCTRL J &hr RSHFT K &hr RGUI L     &kp PT_PLUS  &kp ENTER
 &kp LCTRL      &kp LT           &kp Z       &kp X       &kp C       &kp V                             &kp B        &kp N       &kp M       &kp PT_COMMA   &kp PT_MINUS  &kp RSHFT
-                                                        &kp LALT    &kp SPACE   &mo RAISE    &mo RAISE    &kp BSPC     &kp RALT
+                                                        &kp LALT    &kp SPACE   &mo RAISE  &mo RALT    &kp BSPC  &mo RAISE
             >;
         };
 
         raise_layer {
             display-name = "raise";
 // ------------------------------------------------------------------------------------------------------------
-//         |  F1     |  F3    |  F4     |  F4     |  F5    |                |  F6    |  F7  |  F8   |  F9  |  F10 |       
+//         |  F1     |  F3    |  F4     |  F4     |  F5    |                |  F6    |  F7  |  F8   |  F9  |  F12 |       
 //         | PT_BSLH |   @    |  VOL+   | VOL-    |  NEXT  |                | reset  |  DEL |       |      | '/?  |       
-// |       | CAPS    | INS    | PRNTSCR | SUPER   | studio |                | PGUP   | HOME |   ^   |  END |   +/ |   F12 |
+// |       | CAPS    | INS    | PRNTSCR | SUPER   | studio |                | PGUP   | HOME |   ^   |  END |   +/ |       |
 // |       | PT_GT   |soft_off|         |         |  MUTE  |                | PGDN   |   <- |   v   |  ->  |  Ç   |       |
 //                                      |         |        |      |  |      |        |      | 
             bindings = <
-          &kp F1       &kp F2       &kp F3       &kp F4        &kp F5                   &kp F6       &kp F7       &kp F8       &kp F9       &kp F10
+          &kp F1       &kp F2       &kp F3       &kp F4        &kp F5                   &kp F6       &kp F7       &kp F8       &kp F9       &kp F12
           &kp PT_BSLH  &kp RA(PT_E) &kp C_VOL_UP &kp C_VOL_DN  &kp C_NEXT               &sys_reset   &kp DEL      &trans       &kp PT_SQT   &kp PT_ACUTE
-&trans    &kp CLCK     &kp INS      &kp PSCRN    &kp LGUI      &bootloader              &kp PG_UP    &kp HOME     &kp UP       &kp END      &kp PT_DOT       &kp F12
+&trans    &kp CLCK     &kp INS      &kp PSCRN    &kp LGUI      &bootloader              &kp PG_UP    &kp HOME     &kp UP       &kp END      &kp PT_DOT       &trans
 &trans    &kp PT_GT    &soft_off    &trans       &trans        &kp C_MUTE               &kp PG_DN    &kp LEFT     &kp DOWN     &kp RIGHT    &kp PT_C_CEDILLA &trans
                                                  &trans        &trans    &trans &trans  &trans       &trans 
             >;
